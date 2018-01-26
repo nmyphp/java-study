@@ -10,6 +10,7 @@
         <module>mail-send-demo</module>
         <module>spring-jdbc-demo</module>
         <module>thinking-in-java</module>
+        <module>dubbo-rest-demo</module>
     </modules>
     <packaging>pom</packaging>
 
