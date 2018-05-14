@@ -7,4 +7,5 @@ package com.free.dubbo.demo.provider;
  */
 public interface ServiceFacade {
     String hello();
+    String form(String username, String password);
 }
