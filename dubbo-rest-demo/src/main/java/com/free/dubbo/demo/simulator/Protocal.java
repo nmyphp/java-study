@@ -45,7 +45,9 @@ public class Protocal {
             }
         }
 
-        // 模拟消费端的远程调用
+        /**
+         * 模拟消费端的远程调用
+         */
         public static String remoteInvoke(String cellInfo) throws Exception {
             try {
                 System.out.println("开始调用远端方法" + cellInfo);
@@ -53,6 +55,8 @@ public class Protocal {
                 writer.write(cellInfo);
                 writer.flush();
                 writer.close();
+
+                // 等待服务端响应
                 return Callback.callback();
             } catch (Exception e) {
                 e.printStackTrace();

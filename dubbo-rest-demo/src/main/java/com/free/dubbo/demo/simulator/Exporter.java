@@ -49,7 +49,7 @@ System.out.println("开启监听.......");
 
 String msg = String.format("远端%s请求，内容：%s", accept.getInetAddress(), data);
 System.out.println(msg);
-
+                    // 收到一个客户端请求，并分发给线程池去处理，此处类似于Dubbo的Dispacher
                     final String temp = data;
                     executor.execute(() -> {
                         try {
@@ -57,7 +57,7 @@ System.out.println(msg);
                             // 调用本地方法
                             String resultData = Invoker.invoke(cellInfo);
                             // 回告远端
-                            CellBack.cellBack(resultData);
+                            Callback.callback(resultData);
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -89,21 +89,21 @@ System.out.println(cellInfoMsg);
         }
     }
 
-    public static class CellBack {
-        private static Socket cellBack;
+    public static class Callback {
+        private static Socket callback;
         private static BufferedWriter writer;
 
         static {
             try {
-                cellBack = new Socket("localhost", 6789);
+                callback = new Socket("localhost", 6789);
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
 
-        public static void cellBack(String data) throws Exception{
+        public static void callback(String data) throws Exception{
             try {
-                writer = new BufferedWriter(new OutputStreamWriter(cellBack.getOutputStream()));
+                writer = new BufferedWriter(new OutputStreamWriter(callback.getOutputStream()));
                 writer.write(data);
                 writer.flush();
                 writer.close();
