@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.free</groupId>
-    <artifactId>study-parent</artifactId>
+    <artifactId>java-study</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>kafka-demo</module>
@@ -13,6 +13,7 @@
         <module>dubbo-rest-demo</module>
         <module>jdk-new-future</module>
         <module>spring-quartz-demo</module>
+        <module>jquery-uploadify-demo</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -29,7 +30,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.14.8</version>
+            <version>1.16.16</version>
         </dependency>
     </dependencies>
 
