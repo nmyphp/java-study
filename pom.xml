@@ -14,6 +14,7 @@
         <module>jdk-new-future</module>
         <module>spring-quartz-demo</module>
         <module>jquery-uploadify-demo</module>
+        <module>spring-cloud-demo</module>
     </modules>
     <packaging>pom</packaging>
 
