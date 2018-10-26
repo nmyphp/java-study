@@ -32,7 +32,24 @@ public class HttpUtil {
      * @throws IOException
      */
     public static String get(String uri) throws IOException {
+        return get(uri, null);
+    }
+
+    /**
+     * GET请求，携带header信息
+     * @param uri
+     * @param headers
+     * @return
+     * @throws IOException
+     */
+    public static String get(String uri, Map<String, Object> headers) throws IOException {
         HttpGet httpGet = new HttpGet(uri);
+        // add headers
+        if (null != headers && !headers.isEmpty()) {
+            for (Map.Entry<String, Object> header : headers.entrySet()) {
+                httpGet.addHeader(header.getKey(), header.getValue().toString());
+            }
+        }
         CloseableHttpResponse response = httpClient.execute(httpGet);
         return getResponseBody(response);
     }
