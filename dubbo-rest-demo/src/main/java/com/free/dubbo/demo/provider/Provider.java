@@ -3,9 +3,7 @@ package com.free.dubbo.demo.provider;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 /**
- * @description:
- * @author: chenlongjs
- * @date: 2018/1/26
+ * 服务提供者启动
  */
 public class Provider {
     public static void main(String[] args) throws Exception{

@@ -13,11 +13,8 @@ import org.springframework.util.Assert;
 import java.nio.charset.Charset;
 
 /**
- * @description:
- * @author: chenlongjs
- * @date: 2018/1/26
+ * 消费者Demo
  */
-
 public class ConsumerDemo {
     public static void main(String[] args) throws Exception{
         FileSystemXmlApplicationContext context = new FileSystemXmlApplicationContext("classpath:dubbo-demo-consumer.xml");
@@ -34,7 +31,7 @@ public class ConsumerDemo {
                 .setConnectTimeout(3000)
                 .setSocketTimeout(3000)
                 .build();
-        HttpGet httpGet = new HttpGet("http://localhost:8080/demo/hello");
+        HttpGet httpGet = new HttpGet("http://localhost:8081/demo/hello");
         httpGet.setConfig(config);
 
         HttpResponse httpResponse = client.execute(httpGet);

@@ -1,11 +1,16 @@
 package com.free.dubbo.demo.provider;
 
+import com.free.dubbo.demo.provider.dto.User;
+
 /**
- * @description:
- * @author: chenlongjs
- * @date: 2018/1/26
+ * 接口定义
  */
 public interface ServiceFacade {
     String hello();
+
     String form(String username, String password);
+
+    String form(User user);
+
+    User query(String username);
 }

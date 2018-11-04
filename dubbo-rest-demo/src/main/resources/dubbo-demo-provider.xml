@@ -13,7 +13,7 @@
 
     <!-- use dubbo protocol to export service on port 20880 -->
     <dubbo:protocol name="dubbo" port="2080"/>
-    <dubbo:protocol name="rest" port="8080" server="tomcat"/>
+    <dubbo:protocol name="rest" port="8081" server="tomcat"/>
 
     <bean id="demoService" class="com.free.dubbo.demo.provider.ServiceImpl" />
     <!-- declare the service interface to be exported -->
