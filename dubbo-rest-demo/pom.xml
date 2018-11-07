@@ -64,5 +64,10 @@
             <artifactId>netty-transport</artifactId>
             <version>4.0.27.FInal</version>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.17</version>
+        </dependency>
     </dependencies>
 </project>
