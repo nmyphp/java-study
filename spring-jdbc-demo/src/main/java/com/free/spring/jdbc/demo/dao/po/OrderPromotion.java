@@ -1,4 +1,4 @@
-package com.free.spring.jdbc.demo;
+package com.free.spring.jdbc.demo.dao.po;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -10,7 +10,7 @@ import lombok.Setter;
  */
 @Setter
 @Getter
-public class OrderPromotionDetail {
+public class OrderPromotion {
     private Long tid;
     private String promotionName;
     private String discountFee;
