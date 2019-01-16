@@ -17,16 +17,6 @@ JDK新特性尝鲜
 
 JDK原生的邮件发送
 
-- spring-cloud-demo
-
-spring-cloud工程尝鲜，注册中心，服务者，消费者
-
-- spring-jdbc-demo
-
-基于spring-boot + jdbc 数据查询
-
-基于配置+ @Conditional的选择性Bean注入
-
 - spring-quartz-demo
 
 spring + quartz实现定时任务调度
