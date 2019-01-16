@@ -8,18 +8,17 @@
     <modules>
         <module>kafka-demo</module>
         <module>mail-send-demo</module>
-        <module>spring-jdbc-demo</module>
         <module>thinking-in-java</module>
         <module>dubbo-rest-demo</module>
         <module>jdk-new-future</module>
         <module>spring-quartz-demo</module>
         <module>jquery-uploadify-demo</module>
-        <module>spring-cloud-demo</module>
     </modules>
     <packaging>pom</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jdk.version>1.8</jdk.version>
     </properties>
 
     <dependencies>
@@ -41,9 +40,9 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <encoding>utf-8</encoding>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
         </plugins>
