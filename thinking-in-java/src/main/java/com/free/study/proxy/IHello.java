@@ -5,7 +5,7 @@ package com.free.study.proxy;
  * @author: chenlongjs
  * @date: 2018/2/8
  */
-public interface SimpleInterface {
+public interface IHello {
     /**
      *
      */

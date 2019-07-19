@@ -5,7 +5,7 @@ package com.free.study.proxy;
  * @author: chenlongjs
  * @date: 2018/2/8
  */
-public class SimpleImpl implements SimpleInterface {
+public class MyHello implements IHello {
 
     @Override
     public void say() {

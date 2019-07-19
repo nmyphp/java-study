@@ -9,7 +9,7 @@ import java.lang.reflect.Proxy;
  * @author: chenlongjs
  * @date: 2018/2/8
  */
-public class SimpleProxy implements InvocationHandler{
+public class DynamicProxy implements InvocationHandler{
 
     private Object target;
 
