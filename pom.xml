@@ -13,6 +13,7 @@
         <module>jdk-new-future</module>
         <module>spring-quartz-demo</module>
         <module>jquery-uploadify-demo</module>
+        <module>learn-more</module>
     </modules>
     <packaging>pom</packaging>
 
