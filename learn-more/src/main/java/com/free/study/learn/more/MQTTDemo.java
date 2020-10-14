@@ -49,11 +49,13 @@ public class MQTTDemo {
             Topic[] topics = {new Topic("foo", QoS.AT_LEAST_ONCE)};
             byte[] qoses = connection.subscribe(topics);
             log.info("qose:{}", qoses);
-            Message message = connection.receive();
-            log.debug(message.getTopic());
-            byte[] payload = message.getPayload();
-            log.info("payload:{}", new String(payload));
-            message.ack();
+            while (true) {
+                Message message = connection.receive();
+                log.debug(message.getTopic());
+                byte[] payload = message.getPayload();
+                log.info("payload:{}", new String(payload));
+                message.ack();
+            }
         } finally {
             if (null != connection) {
                 connection.disconnect();
