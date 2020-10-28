@@ -12,7 +12,7 @@ import org.graylog2.syslog4j.server.SyslogServerIF;
 import org.graylog2.syslog4j.server.SyslogServerSessionEventHandlerIF;
 import org.graylog2.syslog4j.util.SyslogUtility;
 
-public class SyslogServerEventHandler implements SyslogServerSessionEventHandlerIF {
+public class MySyslogEventHandler implements SyslogServerSessionEventHandlerIF {
 
     @Override
     public Object sessionOpened(SyslogServerIF syslogServerIF, SocketAddress socketAddress) {

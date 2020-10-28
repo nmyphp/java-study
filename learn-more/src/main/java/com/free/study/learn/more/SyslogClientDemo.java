@@ -11,7 +11,7 @@ import org.junit.Test;
 /**
  * Created by Administrator on 2018/12/12 0012.
  */
-public class MySysLogUDPClient {
+public class SyslogClientDemo {
 
     private static final int PORT = 514;
 
